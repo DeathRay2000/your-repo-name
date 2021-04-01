@@ -10,9 +10,9 @@ const [user, setUser] = useState({})
     setActive(!active)
     console.log(active);
     console.log('I did it');
-    let info = fetch('https://api.github.com/users/mojombo').then(res => res.json())
+  
     if(active === false){
-    setUser(info);
+      fetch('https://api.github.com/users/DeathRay2000').then(res => res.json()).then(info => setUser(info))
     } 
     else{
       setUser({})
